@@ -1,0 +1,111 @@
+/* Skills Section */
+.skills {
+  background: linear-gradient(135deg, #eef2f6, #dde7ee);
+  padding: 80px 20px;
+  text-align: center;
+  border-radius: 18px;
+  max-width: 85%;
+  margin: 9% auto;
+  box-shadow: 0px 12px 28px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Title Styling */
+.skills h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #2c3e50;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 15px;
+}
+
+/* Title Decoration */
+.skills h2::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(135deg, #3498db, #1abc9c);
+  margin: 12px auto;
+  border-radius: 2px;
+}
+
+/* Skills Card Container - Default (For Web View) */
+.skills-container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+  margin-top: 40px;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-bottom: 10px;
+}
+
+/* Individual Skill Card */
+.skills-card {
+  background: linear-gradient(135deg, #ffffff, #f8f9fa);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0px 8px 22px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+  width: 250px;
+  height: 170px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  display: inline-block;
+  white-space: normal;
+}
+
+.skills-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Category Title */
+.skills-card h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #34495e;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Skills List */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Skill Items */
+.skill {
+  font-size: 15px;
+  font-weight: 600;
+  background: rgba(41, 128, 185, 0.15);
+  color: #2980b9;
+  padding: 10px 14px;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+/* ---- Mobile View (Vertically Aligned Cards) ---- */
+@media (max-width: 768px) {
+  .skills-container {
+    display: flex;
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center them */
+    overflow-x: hidden; /* Remove horizontal scrolling */
+    white-space: normal; /* Allow text wrapping */
+    gap: 20px;
+  }
+
+  .skills-card {
+    width: 90%; /* Make cards take full width */
+    max-width: 350px; /* Limit width */
+  }
+}

@@ -1,0 +1,155 @@
+/* ---- Navbar Container ---- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px 40px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  color: #222;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  margin: 20px auto;
+  max-width: 90%;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+/* ---- Logo Styling ---- */
+.navbar .logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #008ba3;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar .logo:hover {
+  transform: scale(1.1);
+}
+
+/* ---- Navigation Menu ---- */
+.navbar .nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+/* ---- Nav Links ---- */
+.navbar .nav-menu li {
+  position: relative;
+}
+
+.navbar .nav-menu li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 17px;
+  font-weight: 600;
+  transition: color 0.3s ease-in-out;
+}
+
+/* ---- Hover Effect with Underline ---- */
+.navbar .nav-menu li a:hover {
+  color: #00bcd4;
+}
+
+.navbar .nav-menu li::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #00bcd4;
+  left: 50%;
+  bottom: -5px;
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.navbar .nav-menu li:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* ---- Mobile Menu Toggle ---- */
+.navbar .menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #222;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar .menu-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* ---- Scoped Header Styling ---- */
+.navbar h2 {
+  display: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: #222;
+  text-align: center;
+  position: relative;
+  padding: 10px 20px;
+  margin-top: 2.7%;
+}
+
+/* ---- Title Decoration ---- */
+.navbar h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(135deg, #00bcd4, #008ba3);
+  margin: 10px auto;
+  border-radius: 2px;
+}
+
+/* ---- Mobile View ---- */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 28px 20px; /* Further reduced padding */
+    max-width: 95%;
+    border-radius: 8px;
+  }
+
+  .navbar .logo {
+    font-size: 18px; /* More compact */
+  }
+
+  .navbar .nav-menu {
+    gap: 15px; /* Further reduced */
+  }
+
+  .navbar .nav-menu li a {
+    font-size: 14px; /* More compact */
+  }
+
+  .navbar .menu-toggle {
+    display: block; /* Show menu toggle */
+  }
+
+  .navbar h2 {
+    display: none;
+  }
+
+ 
+}
+
+
+
+.logout-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: #bb2d3b;
+}

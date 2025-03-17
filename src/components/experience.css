@@ -1,0 +1,130 @@
+/* Experience Section */
+.experience {
+  background: linear-gradient(135deg, #eef2f6, #dde7ee);
+  padding: 80px 20px;
+  text-align: center;
+  border-radius: 15px;
+  max-width: 85%;
+  margin: 10% auto;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+  transition: 0.3s ease-in-out;
+}
+
+/* Title Styling */
+.experience h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #222;
+  position: relative;
+  text-align: center;
+}
+
+/* Title Decoration */
+.experience h2::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  margin: 12px auto;
+  border-radius: 2px;
+}
+
+/* Timeline */
+.experience .timeline {
+  position: relative;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Timeline Item */
+.experience .timeline .timeline-item {
+  position: relative;
+  background: rgba(255, 255, 255, 0.3); /* Glass effect */
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 22px;
+  margin: 25px auto;
+  width: 60%;
+  border-radius: 12px;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.12);
+  text-align: left;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Alternate Positioning (For Web View) */
+.experience .timeline .timeline-item:nth-child(odd) {
+  margin-left: 10%;
+}
+.experience .timeline .timeline-item:nth-child(even) {
+  margin-right: 10%;
+}
+
+/* Hover Effect */
+.experience .timeline .timeline-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Timeline Content */
+.timeline-content h3 {
+  font-size: 22px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.timeline-content h4 {
+  font-size: 18px;
+  color: #007bff;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.duration {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+/* Description List */
+.timeline-content ul {
+  padding-left: 20px;
+}
+
+.timeline-content li {
+  font-size: 18px;
+  color: #444;
+  line-height: 1.6;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Hover Animation */
+.timeline-content li:hover {
+  color: #007bff;
+  transform: translateX(5px);
+}
+
+/* ---- Mobile View Adjustments ---- */
+@media (max-width: 768px) {
+  .experience {
+    padding: 60px 15px; /* Reduce padding */
+    max-width: 95%;
+  }
+
+  .experience .timeline {
+    width: 100%;
+    align-items: center;
+  }
+
+  .experience .timeline .timeline-item {
+    width: 90%; /* Make items full width */
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: left;
+  }
+}

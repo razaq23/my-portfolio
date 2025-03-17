@@ -1,0 +1,150 @@
+/* ---- Home Section ---- */
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding: 60px;
+  background: linear-gradient(135deg, #eef2f6, #dde7ee);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  max-width: 90%;
+  margin: 13% auto;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.home:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Profile Image */
+.home img {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #00bcd4;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* About Section */
+.home .about {
+  max-width: 600px;
+  text-align: center;
+}
+
+/* Name & Title */
+.home .about h2 {
+  font-size: 32px;
+  color: #222;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.home .about h3 {
+  font-size: 22px;
+  color: #444;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+/* Social Links */
+.home .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 15px;
+}
+
+/* Social Icons */
+.home .social-links a {
+  font-size: 28px;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Social Media Colors */
+.home .social-links a:nth-child(1) { color: #0e76a8; } /* LinkedIn */
+.home .social-links a:nth-child(2) { color: #333; } /* GitHub */
+.home .social-links a:nth-child(3) { color: #E4405F; } /* Instagram */
+
+.home .social-links a:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
+
+.home .social-links a:nth-child(4) {
+  font-size: 15px;
+}
+
+/* Download CV Button */
+.home .download-cv {
+  font-size: 14px;
+  padding: 8px 13px;
+  background: linear-gradient(135deg, #00bcd4, #008ba3);
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.home .download-cv i {
+  font-size: 18px;
+}
+
+/* Hover Effect */
+.home .download-cv:hover {
+  background: linear-gradient(135deg, #008ba3, #005f6b);
+  transform: scale(1.01);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.home .social-links a:nth-child(4):hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+/* ---- Mobile Responsive View ---- */
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    padding: 40px 20px;
+    max-width: 95%;
+    margin-top: 25%;
+  }
+
+  /* Profile Image */
+  .home img {
+    width: 180px;
+    height: 180px;
+  }
+
+  /* About Section */
+  .home .about h2 {
+    font-size: 26px;
+  }
+
+  .home .about h3 {
+    font-size: 18px;
+  }
+
+  /* Social Links */
+  .home .social-links {
+    gap: 12px;
+  }
+
+  /* Download CV Button */
+  .home .download-cv {
+    font-size: 13px;
+    padding: 7px 12px;
+  }
+}

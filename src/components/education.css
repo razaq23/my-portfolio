@@ -1,0 +1,157 @@
+/* General Styling */
+.education {
+  background: linear-gradient(135deg, #eef2f6, #dde7ee);
+  padding: 60px 20px;
+  text-align: center;
+  position: relative;
+  margin: 10% auto;
+  box-shadow: 0px 12px 28px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Title Styling */
+.education h2 {
+  text-align: left;
+  margin-left: 5.5%;
+  font-size: 28px;
+  color: #222;
+  font-weight: bold;
+  position: relative;
+}
+
+/* Title Animation */
+.education h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #00bcd4;
+  margin-top: 5px;
+  border-radius: 2px;
+}
+
+/* Horizontal Card Container */
+.education .timeline {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  max-width: 93%;
+  margin: auto;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+  perspective: 1000px;
+}
+
+/* Individual Education Cards */
+.education .timeline-item {
+  background: rgba(255, 255, 255, 0.15); /* Glass effect */
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 25%;
+  height: 200px;
+  min-width: 220px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-in-out forwards;
+}
+
+/* Hover Effect */
+.education .timeline-item:hover {
+  transform: scale(1.05) rotateY(5deg);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Graduation Cap Icon */
+.education .timeline-item::before {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 22px;
+  color: #00bcd4;
+}
+
+/* Text Styling */
+.education .timeline-item h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.education .timeline-item p {
+  font-size: 16px;
+  color: #444;
+  margin: 5px 0;
+}
+
+/* Scroll Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---- Mobile Responsive View ---- */
+@media (max-width: 768px) {
+  .education {
+    padding: 40px 15px;
+    margin-top: 8%;
+  }
+
+  /* Title */
+  .education h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-left: 0;
+    padding-bottom: 30px;
+  }
+  .education h2::after {
+    content: "";
+    display: block;
+    width: 83px;
+    height: 4px;
+    background: #00bcd4;
+    margin-top: 5px;
+    border-radius: 2px;
+    margin-left: 41%;
+  }
+  /* Timeline (Cards should be stacked) */
+  .education .timeline {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  /* Individual Cards */
+  .education .timeline-item {
+    width: 90%;
+    min-width: unset;
+    height: auto;
+    padding: 15px;
+  }
+
+  /* Text inside Cards */
+  .education .timeline-item h3 {
+    font-size: 18px;
+  }
+
+  .education .timeline-item p {
+    font-size: 14px;
+  }
+}
