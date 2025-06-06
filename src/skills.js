@@ -1,7 +1,7 @@
 const SkillsData = [
   {
     category: "Front-End Skills",
-    skills: ["HTML", "CSS", "JavaScript", "React.js", "Bootstrap"]
+    skills: ["HTML", "CSS", "JavaScript", "React.js"]
   },
   {
     category: "Back-End Skills",

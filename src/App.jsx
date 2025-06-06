@@ -14,21 +14,16 @@ const App = () => {
   return (
     <Router>
       <Navbar />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
+      
+           
               <Home />
               <Education educationData={educationData} />
               <Skills SkillsData={SkillsData} />
               <Experience />
               <Projects />
               <Contact />
-            </>
-          }
-        />
-      </Routes>
+           
+         
     </Router>
   );
 };
