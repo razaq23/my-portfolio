@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router } from "react-router-dom"; // 🔁 Changed here
 import Navbar from "./components/Navbar";
 import Home from "./components/home";
 import Education from "./components/education";
@@ -12,18 +12,14 @@ import Projects from "./components/project.jsx";
 
 const App = () => {
   return (
-    <Router>
+    <Router> {/* ✅ HashRouter prevents GitHub Pages 404 issues */}
       <Navbar />
-      
-           
-              <Home />
-              <Education educationData={educationData} />
-              <Skills SkillsData={SkillsData} />
-              <Experience />
-              <Projects />
-              <Contact />
-           
-         
+      <Home />
+      <Education educationData={educationData} />
+      <Skills SkillsData={SkillsData} />
+      <Experience />
+      <Projects />
+      <Contact />
     </Router>
   );
 };
